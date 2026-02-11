@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Valentine Proposal 💖</title>
+<style>
+body {
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    height: 100vh;
+}
+
+h1 {
+    margin-top: 120px;
+    font-size: 40px;
+    color: white;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+#yesBtn {
+    background-color: #ff4b5c;
+    color: white;
+}
+
+#noBtn {
+    background-color: #333;
+    color: white;
+    position: absolute;
+}
+
+.hearts {
+    font-size: 60px;
+    animation: float 1.5s infinite alternate;
+}
+
+@keyframes float {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-20px); }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Will You Be My Valentine? 💘</h1>
+
+<button id="yesBtn" onclick="showLove()">Yes 💖</button>
+<button id="noBtn" onmouseover="moveNo()">No 😢</button>
+
+<div id="loveContainer"></div>
+
+<script>
+function showLove() {
+    document.getElementById("loveContainer").innerHTML =
+    "<div class='hearts'>💖 💐 🌹 💕 💘 💝</div>" +
+    "<h2 style='color:white;'>Yayyyy!!! I Love Youuuuu ❤️</h2>";
+}
+
+function moveNo() {
+    let noBtn = document.getElementById("noBtn");
+    let x = Math.random() * (window.innerWidth - 100);
+    let y = Math.random() * (window.innerHeight - 100);
+
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
