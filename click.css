@@ -52,6 +52,12 @@ button {
     box-shadow: 0 0 20px gold;
 }
 
+#loveContainer {
+    margin-top: 40px;
+    position: relative;
+    z-index: 2;
+}
+
 .hearts {
     font-size: 60px;
     animation: float 1.5s infinite alternate;
@@ -86,8 +92,13 @@ button {
     100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
 }
 
+.futureImages {
+    margin-top: 30px;
+}
+
 .futureImages img {
     width: 250px;
+    height: auto;
     border-radius: 15px;
     margin: 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
@@ -105,6 +116,8 @@ button {
     font-size: 24px;
     animation: fall linear infinite;
     color: white;
+    pointer-events: none;
+    z-index: 0;
 }
 
 @keyframes fall {
