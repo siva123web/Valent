@@ -36,7 +36,7 @@ function showMarriage() {
     </p>" +
 
  "<div class='futureImages fadeIn'>\
-    <img src='https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=600&q=80' alt='Family'>\
+    <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=600&q=80" alt="Family">\
     <img src='https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80' alt='Car'>\
     <img src='https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=600&q=80' alt='House'>\
 </div>";
