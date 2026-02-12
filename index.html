@@ -8,8 +8,8 @@ body {
     background: linear-gradient(to right, #ff758c, #ff7eb3);
     text-align: center;
     font-family: Arial, sans-serif;
-    overflow: hidden;
-    height: 100vh;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
 h1 {
@@ -68,6 +68,13 @@ button {
     50% { transform: translate(-50%, -50%) scale(1.5); opacity: 1; }
     100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
 }
+
+.futureImages img {
+    width: 250px;
+    border-radius: 15px;
+    margin: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
 </style>
 </head>
 
@@ -84,7 +91,6 @@ button {
 
 function showLove() {
 
-    // 💥 Create Blast
     let blast = document.createElement("div");
     blast.className = "blast";
     blast.innerHTML = "💥";
@@ -94,36 +100,31 @@ function showLove() {
         blast.remove();
     }, 800);
 
-    // Show Love Content
     document.getElementById("loveContainer").innerHTML =
     "<div class='hearts'>💖 💐 🌹 💕 💘 💝</div>" +
-    "<h2 style='color:white;'>Ewww! Love You So Much POOJI 💥❤️</h2>" +
-
-    // 🔗 Clean Link Button (No URL Visible)
-    "<a href='https://yourusername.github.io/repository-name/' target='_blank' style='text-decoration:none;'>" +
-    "<button style='padding:12px 25px; border-radius:25px; background:white; color:#ff4b5c; border:none; font-size:18px; cursor:pointer;'> </button>" +
-    "</a>" +
-
+    "<h2 style='color:white;'>Ewww! Love You So Much POOJI 💥💥💥❤️❤️❤️❤️❤️❤️💥💥💥</h2>" +
     "<br>" +
     "<button class='marryBtn' onclick='showMarriage()'>Will You Marry Me? 💍</button>";
 }
 
 function showMarriage() {
+    document.getElementById("loveContainer").innerHTML =
+    
     "<div class='hearts'>💍 💎 👰 🤵 🎉 ✨</div>" +
     
     "<h2 style='color:white;'>She Said YESSSS!!! 💍❤️ Forever Starts Now 💕</h2>" +
 
-    "<p style='color:white; font-size:20px; width:70%; margin:20px auto; line-height:1.6;'>\
-    From this day forward, I promise to love you endlessly 💖.<br>\
-    We will build our dreams together — a happy home 🏡, \
-    a beautiful family 👨‍👩‍👧‍👦, and a life full of laughter 🚗✨.<br>\
+    "<p style='color:white; font-size:20px; width:70%; margin:20px auto; line-height:1.8;'>\
+    From this moment, I promise to stand beside you in every chapter of life 💖.<br>\
+    We will build our dream home 🏡 filled with laughter and love.<br>\
+    Drive into sunsets together 🚗✨ and create a beautiful family 👨‍👩‍👧‍👦.<br>\
     You are my today, my tomorrow, and my forever ❤️\
     </p>" +
 
-    "<div style='display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin-top:20px;'>\
-        <img src='https://images.unsplash.com/photo-1529634597503-5a0f3d8c36b9' width='250' style='border-radius:15px;'>\
-        <img src='https://images.unsplash.com/photo-1502877338535-766e1452684a' width='250' style='border-radius:15px;'>\
-        <img src='https://images.unsplash.com/photo-1568605114967-8130f3a36994' width='250' style='border-radius:15px;'>\
+    "<div class='futureImages'>\
+        <img src='https://images.unsplash.com/photo-1529634597503-5a0f3d8c36b9' alt='Family'>\
+        <img src='https://images.unsplash.com/photo-1502877338535-766e1452684a' alt='Car'>\
+        <img src='https://images.unsplash.com/photo-1568605114967-8130f3a36994' alt='House'>\
     </div>";
 }
 
