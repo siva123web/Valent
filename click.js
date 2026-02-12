@@ -38,10 +38,11 @@ function showMarriage() {
             You are my today, my tomorrow, and my forever ❤️
         </p>
 
+        
         <div class="futureImages fadeIn">
-            <img src="https://via.placeholder.com/400x300.png?text=Family">
-            <img src="https://via.placeholder.com/400x300.png?text=Car">
-            <img src="https://via.placeholder.com/400x300.png?text=House">
+        <img src="https://www.w3schools.com/html/img_girl.jpg">
+        <img src="https://www.w3schools.com/html/img_chania.jpg">
+        <img src="https://www.w3schools.com/html/img_lights.jpg">
         </div>
     `;
 }
