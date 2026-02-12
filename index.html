@@ -7,17 +7,21 @@
 body {
     background: linear-gradient(to right, #ff758c, #ff7eb3);
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     overflow-x: hidden;
     min-height: 100vh;
+    padding-bottom: 60px;
 }
 
+/* Heading */
 h1 {
     margin-top: 120px;
-    font-size: 40px;
+    font-size: 42px;
     color: white;
+    text-shadow: 0 0 15px rgba(255,255,255,0.6);
 }
 
+/* Buttons */
 button {
     padding: 15px 30px;
     font-size: 20px;
@@ -25,24 +29,41 @@ button {
     border-radius: 30px;
     cursor: pointer;
     margin: 20px;
+    transition: all 0.3s ease;
 }
 
+/* Yes Button */
 #yesBtn {
     background-color: #ff4b5c;
     color: white;
 }
 
+#yesBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff4b5c;
+}
+
+/* No Button */
 #noBtn {
     background-color: #333;
     color: white;
     position: absolute;
+    top: 60%;
+    left: 55%;
 }
 
+/* Marry Button */
 .marryBtn {
     background-color: gold;
     color: black;
 }
 
+.marryBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px gold;
+}
+
+/* Floating Hearts */
 .hearts {
     font-size: 60px;
     animation: float 1.5s infinite alternate;
@@ -53,7 +74,17 @@ button {
     to { transform: translateY(-20px); }
 }
 
-/* 💥 Blast Animation */
+/* Fade In */
+.fadeIn {
+    animation: fade 1.2s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Blast */
 .blast {
     position: fixed;
     font-size: 100px;
@@ -69,11 +100,32 @@ button {
     100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
 }
 
+/* Future Images */
 .futureImages img {
     width: 250px;
     border-radius: 15px;
     margin: 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.futureImages img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+/* Falling Hearts */
+.falling-heart {
+    position: fixed;
+    top: -10px;
+    font-size: 24px;
+    animation: fall linear infinite;
+    color: white;
+}
+
+@keyframes fall {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
 }
 </style>
 </head>
@@ -101,16 +153,15 @@ function showLove() {
     }, 800);
 
     document.getElementById("loveContainer").innerHTML =
-    "<div class='hearts'>💖 💐 🌹 💕 💘 💝</div>" +
-    "<h2 style='color:white;'>Ewww! Love You So Much POOJI 💥💥💥❤️❤️❤️❤️❤️❤️💥💥💥</h2>" +
-    "<br>" +
+    "<div class='hearts fadeIn'>💖 💐 🌹 💕 💘 💝</div>" +
+    "<h2 style='color:white;'>Ewww! Love You So Much POOJI 💥❤️</h2>" +
     "<button class='marryBtn' onclick='showMarriage()'>Will You Marry Me? 💍</button>";
 }
 
 function showMarriage() {
     document.getElementById("loveContainer").innerHTML =
     
-    "<div class='hearts'>💍 💎 👰 🤵 🎉 ✨</div>" +
+    "<div class='hearts fadeIn'>💍 💎 👰 🤵 🎉 ✨</div>" +
     
     "<h2 style='color:white;'>She Said YESSSS!!! 💍❤️ Forever Starts Now 💕</h2>" +
 
@@ -121,7 +172,7 @@ function showMarriage() {
     You are my today, my tomorrow, and my forever ❤️\
     </p>" +
 
-    "<div class='futureImages'>\
+    "<div class='futureImages fadeIn'>\
         <img src='https://images.unsplash.com/photo-1529634597503-5a0f3d8c36b9' alt='Family'>\
         <img src='https://images.unsplash.com/photo-1502877338535-766e1452684a' alt='Car'>\
         <img src='https://images.unsplash.com/photo-1568605114967-8130f3a36994' alt='House'>\
@@ -136,6 +187,20 @@ function moveNo() {
     noBtn.style.left = x + "px";
     noBtn.style.top = y + "px";
 }
+
+/* Falling Hearts Generator */
+setInterval(() => {
+    let heart = document.createElement("div");
+    heart.className = "falling-heart";
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}, 500);
 
 </script>
 
