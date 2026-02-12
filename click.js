@@ -22,25 +22,28 @@ function showLove() {
 }
 
 function showMarriage() {
-    document.getElementById("loveContainer").innerHTML =
-    
-    "<div class='hearts fadeIn'>💍 💎 👰 🤵 🎉 ✨</div>" +
-    
-    "<h2 style='color:white;'>She Said YESSSS!!! 💍❤️ Forever Starts Now 💕</h2>" +
+    const container = document.getElementById("loveContainer");
 
-    "<p style='color:white; font-size:20px; width:70%; margin:20px auto; line-height:1.8;'>\
-    From this moment, I promise to stand beside you in every chapter of life 💖.<br>\
-    We will build our dream home 🏡 filled with laughter and love.<br>\
-    Drive into sunsets together 🚗✨ and create a beautiful family 👨‍👩‍👧‍👦.<br>\
-    You are my today, my tomorrow, and my forever ❤️\
-    </p>" +
+    container.innerHTML = `
+        <div class="hearts fadeIn">💍 💎 👰 🤵 🎉 ✨</div>
 
-  
+        <h2 style="color:white;">
+            She Said YESSSS!!! 💍❤️ Forever Starts Now 💕
+        </h2>
+
+        <p style="color:white; font-size:20px; width:70%; margin:20px auto; line-height:1.8;">
+            From this moment, I promise to stand beside you in every chapter of life 💖.<br>
+            We will build our dream home 🏡 filled with laughter and love.<br>
+            Drive into sunsets together 🚗✨ and create a beautiful family 👨‍👩‍👧‍👦.<br>
+            You are my today, my tomorrow, and my forever ❤️
+        </p>
+
         <div class="futureImages fadeIn">
-            <img src="https://picsum.photos/400/300">
-            <img src="https://picsum.photos/401/300">
-            <img src="https://picsum.photos/402/300">
+            <img src="https://via.placeholder.com/400x300.png?text=Family">
+            <img src="https://via.placeholder.com/400x300.png?text=Car">
+            <img src="https://via.placeholder.com/400x300.png?text=House">
         </div>
+    `;
 }
 
 function moveNo() {
