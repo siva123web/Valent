@@ -101,7 +101,7 @@ function showLove() {
 
     // 🔗 Clean Link Button (No URL Visible)
     "<a href='https://yourusername.github.io/repository-name/' target='_blank' style='text-decoration:none;'>" +
-    "<button style='padding:12px 25px; border-radius:25px; background:white; color:#ff4b5c; border:none; font-size:18px; cursor:pointer;'> 💖</button>" +
+    "<button style='padding:12px 25px; border-radius:25px; background:white; color:#ff4b5c; border:none; font-size:18px; cursor:pointer;'> </button>" +
     "</a>" +
 
     "<br>" +
@@ -109,9 +109,22 @@ function showLove() {
 }
 
 function showMarriage() {
-    document.getElementById("loveContainer").innerHTML =
     "<div class='hearts'>💍 💎 👰 🤵 🎉 ✨</div>" +
-    "<h2 style='color:white;'>She Said YESSSS!!! 💍❤️ Forever Starts Now 💕</h2>";
+    
+    "<h2 style='color:white;'>She Said YESSSS!!! 💍❤️ Forever Starts Now 💕</h2>" +
+
+    "<p style='color:white; font-size:20px; width:70%; margin:20px auto; line-height:1.6;'>\
+    From this day forward, I promise to love you endlessly 💖.<br>\
+    We will build our dreams together — a happy home 🏡, \
+    a beautiful family 👨‍👩‍👧‍👦, and a life full of laughter 🚗✨.<br>\
+    You are my today, my tomorrow, and my forever ❤️\
+    </p>" +
+
+    "<div style='display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin-top:20px;'>\
+        <img src='https://images.unsplash.com/photo-1529634597503-5a0f3d8c36b9' width='250' style='border-radius:15px;'>\
+        <img src='https://images.unsplash.com/photo-1502877338535-766e1452684a' width='250' style='border-radius:15px;'>\
+        <img src='https://images.unsplash.com/photo-1568605114967-8130f3a36994' width='250' style='border-radius:15px;'>\
+    </div>";
 }
 
 function moveNo() {
