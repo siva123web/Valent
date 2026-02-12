@@ -17,7 +17,7 @@ function showLove() {
 
     document.getElementById("loveContainer").innerHTML =
     "<div class='hearts fadeIn'>💖 💐 🌹 💕 💘 💝</div>" +
-    "<h2 style='color:white;'>Ewww! Love You So Much POOJI ❤️</h2>" +
+    "<h2 style='color:white;'>Ewww! Love You So Much 💥❤️❤️❤️❤️💥 POOJI 💥❤️❤️❤️❤️💥</h2>" +
     "<button class='marryBtn' onclick='showMarriage()'>Will You Marry Me? 💍</button>";
 }
 
@@ -40,9 +40,9 @@ function showMarriage() {
 
         
         <div class="futureImages fadeIn">
-        <img src="https://www.w3schools.com/html/img_girl.jpg">
-        <img src="https://www.w3schools.com/html/img_chania.jpg">
-        <img src="https://www.w3schools.com/html/img_lights.jpg">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600" alt="Car">
+            <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600" alt="Family">
+            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600" alt="House">
         </div>
     `;
 }
