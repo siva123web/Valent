@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Valentine Proposal 💖</title>
+
 <style>
 body {
     background: linear-gradient(to right, #ff758c, #ff7eb3);
@@ -51,6 +52,22 @@ button {
     from { transform: translateY(0px); }
     to { transform: translateY(-20px); }
 }
+
+/* 💥 Blast Animation */
+.blast {
+    position: fixed;
+    font-size: 100px;
+    animation: explode 0.8s ease-out forwards;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes explode {
+    0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+    50% { transform: translate(-50%, -50%) scale(1.5); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+}
 </style>
 </head>
 
@@ -66,9 +83,22 @@ button {
 <script>
 
 function showLove() {
+
+    // 💥 Create Blast
+    let blast = document.createElement("div");
+    blast.className = "blast";
+    blast.innerHTML = "💥";
+    document.body.appendChild(blast);
+
+    setTimeout(() => {
+        blast.remove();
+    }, 800);
+
+    // Show Love Content
     document.getElementById("loveContainer").innerHTML =
     "<div class='hearts'>💖 💐 🌹 💕 💘 💝</div>" +
-    "<h2 style='color:white;'>Ewww! Love You So Much POOJI ❤️  <p style="font-size:40px; color:pink;">♀</p> ❤️❤️❤️❤️ </h2>" +
+    "<h2 style='color:white;'>Ewww! Love You So Much ❤️❤️❤️❤️ POOJI 💥❤️❤️❤️❤️</h2>" +
+    "<p style='font-size:40px; color:pink;'>♀</p>" +
     "<button class='marryBtn' onclick='showMarriage()'>Will You Marry Me? 💍</button>";
 }
 
