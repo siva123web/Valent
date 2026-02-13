@@ -14,13 +14,20 @@ h1 {
     text-shadow: 0 0 15px rgba(255,255,255,0.6);
 }
 
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    position: relative;
+}
+
 button {
     padding: 15px 30px;
     font-size: 20px;
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    margin: 20px;
     transition: all 0.3s ease;
 }
 
@@ -37,9 +44,7 @@ button {
 #noBtn {
     background-color: #333;
     color: white;
-    position: absolute;
-    top: 60%;
-    left: 55%;
+    position: relative;
 }
 
 .marryBtn {
