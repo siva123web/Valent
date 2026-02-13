@@ -3,6 +3,11 @@ const noBtn = document.getElementById("noBtn");
 
 yesBtn.addEventListener("click", showLove);
 noBtn.addEventListener("mouseover", moveNo);
+window.addEventListener("load", () => {
+    noBtn.style.position = "relative";
+    noBtn.style.left = "0px";
+    noBtn.style.top = "0px";
+});
 
 function showLove() {
 
